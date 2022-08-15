@@ -1,32 +1,33 @@
-import java.util.*; 
+import java.util.Scanner;
 
-public class discount 
-{
-	public static void main(String args[])
+
+public class discount {
+
+	public static void main(String[] args) {
+
+	System.out.println("percentage of cash discount:");
+	double amt,dis;
+	Scanner my=new Scanner (System.in);
+	System.out.println("Enter the MRP amount:");
+	amt=my.nextInt();
+	System.out.println(amt);
+	System.out.println("The calculation are:");
+	if(amt<1000)
 	{
-		double amt,dis,parse;
-		Scanner my = new Scanner System.in;
-		System.out.println("Enter the MRP amount:");
-		net amount=(MRP amount - discount amount);
-		if(amt>=501 && amt<=1000)
-		{
-			System.out.println("the total amt is total cost - 0.05");
-		}
-		else if(amt>=1001 && amt<=5000)
-		{
-			System.out.println("the total amt is total cost - 0.1");
-		}
-		else if(amt>=5001 && amt<=10000)
-		{
-			System.out.println("the total amt is total cost - 0.12");
-		}
-		else 
-		{
-			System.out.println("the total amt is total cost - 0.15");
-		}
-		my.close();
-		
+		dis=amt*0.05;
+	}
+	else if(1001<=amt && amt<2000)
+	{
+		dis=amt*0.075;
+	}
+	else if(amt>2000)
+	{
+		dis=amt*0.1;
+	}
+	System.out.println("The discount is \t"+dis);
+	System.out.println("The after discount is"+(amt-dis));
+	my.close();
+	
 	}
 
 }
-

@@ -1,31 +1,39 @@
+import java.util.Scanner;
 
 public class diamond 
 {
-	public static void main(String args[])
+	public static void main(String[] args) 
 	{
-		for(int r=0;r<=10;r++)
+		
+		int i,j,row,count,n=1,k;
+		Scanner si=new Scanner(System.in);
+		System.out.println("Enter the row:");
+		row=si.nextInt();
+		count=row;
+		for(k=0;k<row;k++)
 		{
-			for(int a=0;a<10-r;a++)
-			{
-				System.out.print(" ");
-			}
-			for(int j=0;j<=r;j++)
-			{
-				System.out.print("* ");
-			}
+			for(i=0;i<=count;i++)
+				System.out.println(" ");
+			count--;
+			for(j=0;j<n;j++)
+				System.out.println("*");				
+			n=n+2;
 			System.out.println();
 		}
-		for(int r=9;r>=0;r--)
+		count=(row-1)*2-1;
+		n=3;
+		for(k=1;k<row;k++)
 		{
-			for(int a=0;a<10-r;a++)
-			{
-				System.out.print(" ");
-			}
-			for(int j=0;j<=r;j++)
-			{
-				System.out.print("* ");
-			}
+			for(i=1;i<=n;i++)
+				System.out.println("");
+			for(j=1;j<=count;j++)
+				System.out.println("*");
+			count=count-2;
+			n++;
 			System.out.println();
+			si.close();
 		}
+		
 	}
+	
 }
